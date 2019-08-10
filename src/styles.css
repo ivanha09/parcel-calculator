@@ -1,0 +1,113 @@
+.App {
+  font-family: sans-serif;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+h3 {
+  color: hsl(0, 0%, 30%);
+}
+
+.info {
+  padding: 0 30px;
+  max-width: 400px;
+}
+
+input {
+  width: 100px;
+  height: 60px;
+  padding: 0 20px;
+  font-size: 18px;
+  margin: 10px;
+  border-radius: 5px;
+  border: 2px solid hsl(0, 0%, 90%);
+}
+
+.redText {
+  color: red;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 100px 300px;
+  background-color: #fff;
+  color: #444;
+}
+
+.label {
+  padding: 20px 0 20px 0px;
+}
+
+/* .box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 120%;
+} */
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+
+/* Accordion styles */
+.tabs {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.1);
+  border: 1px solid red;
+}
+
+.tab {
+  width: 100%;
+  color: black;
+  overflow: hidden;
+}
+.tab-label {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  /* Icon */
+}
+.tab-label:hover {
+  background: #f8cccc;
+}
+.tab-label::after {
+  content: "\276F";
+  width: 1em;
+  height: 1em;
+  text-align: center;
+  transition: all 0.35s;
+}
+.tab-content {
+  max-height: 0;
+  padding: 0 1em;
+  color: rgb(0, 0, 0);
+  background: white;
+  transition: all 0.35s;
+}
+.tab-close {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1em;
+  font-size: 0.75em;
+  background: rgb(14, 58, 179);
+  cursor: pointer;
+}
+.tab-close:hover {
+  background: #29cc00;
+}
+
+.checkbox:checked + .tab-label {
+  background: #f8cccc;
+}
+.checkbox:checked + .tab-label::after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.checkbox:checked ~ .tab-content {
+  max-height: 100vh;
+  padding: 1em;
+}
